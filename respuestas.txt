@@ -1,0 +1,67 @@
+18. Escriba el programa que muestra por la consola la frase "Hola Mundo". ¿Qu´e signiﬁcado tiene la salida? (puts ’Hola Mundo’)
+
+muestra el texto entre comillas simples de forma literal y => nil
+
+---
+
+21. ¿Qué diferencia hay entre "\t\n" y ’\t\n’?
+
+	El primero (comillas dobles) se interpreta como caracteres especiales, mientras que el segundo (comillas simples) se interpreta de forma literal.
+---
+
+22. ¿Cómo funciona %q? ¿Qué es %q{hello world\n}? ¿Qué es %q{’a’ ’b’ ’c’}?
+
+	%q coloca entre comillas simples la cadena que se introduce entre los símbolos {}, por lo que el \n no se interpreta como salto de línea.
+	%q{’a’ ’b’ ’c’} hace que las comillas simples se interpreten de forma literal.
+---
+
+23. ¿Cómo funciona %Q? ¿Qué es %Q{hello world\n}? ¿Qué es %Q{"a" "b" "c"}?
+
+	%Q coloca entre comillas dobles la cadena que se introduce entre los símbolos {}, por lo que el \n se interpreta como salto de línea.
+	%Q{"a" "b" "c"} hace que las comillas dobles se interpreten de forma literal.
+---
+
+24. ¿Qué queda en c?
+
+	A c se le hace una asignación multilínea. Almacena la cadena:
+--4--
+--2--
+es decir, que interpreta #{a} y #{b} como los valores que se le asignaron a esas variables a y b
+---
+
+25. ¿Qué queda en c?
+
+	En este caso también hay una asignación multilínea pero esta vez es de forma literal, de forma que no se interpretan las expresiones y no se muestran los valores de las variables. Queda:
+--#{a}--
+--#{b}--
+literalmente, sin indicar el valor de a y b.
+---
+
+26. s = "hello". ¿Cuál es el valor de las siguientes expresiones?
+s[0,2]
+	el valor es "he"
+s[-1,1]
+	el valor es "o"
+s[0,10]
+	el valor es "hello"
+---
+
+27. ¿Qué queda en g?
+
+	En g queda la cadena "hello world", ya que el operador << añade a la cadena que ya existía en g una nueva cadena
+---
+
+28. ¿Qué queda en e?
+
+	En e queda la cadena "...", pues se toma la cadena indicada entre comillas simples (en este caso es sólo el caracter .) y se concatena con sí misma tantas veces como se indiquen tras el operador *
+---
+
+29. ¿Cuál es el resultado?
+
+	El resultado es la cadena "2 2 2", pues se evalúa la expresión entre los símbolos #{}, que da como resultado 2, y se concatena tres veces consigo mismo por el operador *3
+---
+
+30. ¿Qué es esto? %w[this is a test]
+
+	%w separa la cadena introducida entre corchetes en varias subcadenas. Las separa por los espacios en blanco, de forma que queda como resultado ["this", "is", "a", "test"]
+---
